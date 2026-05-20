@@ -45,6 +45,3 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
-
-# Trial screenshot not used in the final submission documentation
-/screenshots/Screenshot_20260520_024230.png

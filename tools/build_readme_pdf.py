@@ -16,10 +16,10 @@ from reportlab.platypus import Image, PageBreak, Paragraph, Preformatted, Simple
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "README.pdf"
 SCREENSHOT_CAPTIONS = [
-    ("Home screen and difficulty selection", "screenshots/Screenshot_20260520_024200.png"),
-    ("Active game screen", "screenshots/Screenshot_20260520_024216.png"),
-    ("Near-complete game state", "screenshots/Screenshot_20260520_024524.png"),
-    ("Win/result screen", "screenshots/Screenshot_20260520_024535.png"),
+    ("Home screen and difficulty selection", "screenshots/Screenshot_20260520_030511.png"),
+    ("Active game screen", "screenshots/Screenshot_20260520_030550.png"),
+    ("Game progress with matched cards", "screenshots/Screenshot_20260520_030619.png"),
+    ("Win/result screen", "screenshots/Screenshot_20260520_030629.png"),
 ]
 
 EXCLUDED_DIRS = {
@@ -27,6 +27,7 @@ EXCLUDED_DIRS = {
     ".dart_tool",
     ".idea",
     ".gradle",
+    ".kotlin",
     "build",
     "__pycache__",
     "coverage",
@@ -42,8 +43,9 @@ EXCLUDED_FILES = {
     "MC_Exercise2_2026NN.pdf",
     "Generated.xcconfig",
     "GeneratedPluginRegistrant.java",
+    "GeneratedPluginRegistrant.h",
+    "GeneratedPluginRegistrant.m",
     "flutter_export_environment.sh",
-    "Screenshot_20260520_024230.png",
 }
 EXCLUDED_SUFFIXES = {".zip", ".iml"}
 
@@ -349,24 +351,6 @@ flutter run -d chrome"""
         )
     )
     story.append(Preformatted(project_tree(), styles["Code"]))
-
-    story.append(PageBreak())
-    story.append(Paragraph("Final Submission Checklist", styles["H1"]))
-    checklist = [
-        ["Item", "Status"],
-        ["Dart source files present", "Pass"],
-        ["Local assets/images present", "Pass"],
-        ["Real screenshots present", "Pass"],
-        ["README.md present", "Pass"],
-        ["README.pdf present", "Pass"],
-        ["flutter analyze", "Pass"],
-        ["flutter test", "Pass"],
-        ["GitHub repository", "Prepared for public push to the repository URL on the cover page"],
-        ["ZIP/D2L package", "Ready to package after final repository verification"],
-    ]
-    checklist_table = Table(checklist, colWidths=[2.6 * inch, 4.5 * inch], repeatRows=1)
-    checklist_table.setStyle(table_style())
-    story.append(checklist_table)
 
     doc.build(story, onFirstPage=header_footer, onLaterPages=header_footer)
 

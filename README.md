@@ -141,10 +141,10 @@ Generated build/cache folders are excluded from this listing: `build/`, `.dart_t
 |-- pubspec.lock
 |-- pubspec.yaml
 |-- screenshots/
-|   |-- Screenshot_20260520_024200.png
-|   |-- Screenshot_20260520_024216.png
-|   |-- Screenshot_20260520_024524.png
-|   `-- Screenshot_20260520_024535.png
+|   |-- Screenshot_20260520_030511.png
+|   |-- Screenshot_20260520_030550.png
+|   |-- Screenshot_20260520_030619.png
+|   `-- Screenshot_20260520_030629.png
 |-- test/
 |   |-- game_controller_test.dart
 |   `-- widget_test.dart
@@ -216,29 +216,10 @@ flutter test
 
 ## Screenshots
 
-### Home Screen
+| Home Screen | Active Game |
+| --- | --- |
+| <img src="screenshots/Screenshot_20260520_030511.png" alt="Home screen with difficulty selection" width="260"> | <img src="screenshots/Screenshot_20260520_030550.png" alt="Active game screen" width="260"> |
 
-![Home screen](screenshots/Screenshot_20260520_024200.png)
-
-### Active Game
-
-![Active game screen](screenshots/Screenshot_20260520_024216.png)
-
-### Near Completion
-
-![Near completed game](screenshots/Screenshot_20260520_024524.png)
-
-### Result Screen
-
-![Result screen](screenshots/Screenshot_20260520_024535.png)
-
-## Final Submission Checklist
-
-- Flutter/Dart source files are present in `lib/`.
-- Local image assets are present in `assets/images/`.
-- Real screenshots are present in `screenshots/`.
-- `README.md` and `README.pdf` are present.
-- `flutter analyze` passes.
-- `flutter test` passes.
-- Android/iOS/Web Flutter platform folders are present.
-- Project is ready for public GitHub upload and final D2L ZIP packaging.
+| Game Progress | Result Screen |
+| --- | --- |
+| <img src="screenshots/Screenshot_20260520_030619.png" alt="Game progress with matched cards" width="260"> | <img src="screenshots/Screenshot_20260520_030629.png" alt="Result screen after completing the game" width="260"> |
